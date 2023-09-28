@@ -1,3 +1,5 @@
+import sys
+
 """
 The Tribonacci series algorithm prints a sequence where each term is
 the sum of the three preceding terms. It starts with the initial values of
@@ -18,4 +20,9 @@ def tri(n:int):
     return result
 
 num:int = 6
+
+# to skip the "RecursionError"
+sys.setrecursionlimit(num*2)
+
+
 print(f"\n the {num}th tribonacci num is:\n", tri(num), "\n")

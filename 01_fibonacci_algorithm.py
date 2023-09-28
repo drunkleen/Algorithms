@@ -1,3 +1,5 @@
+import sys
+
 # https://en.wikipedia.org/wiki/Fibonacci_sequence
 """
 In mathematics, the Fibonacci sequence is a sequence in which each
@@ -19,4 +21,9 @@ def fib(n:int):
     return result
 
 num:int = 50
+
+# to skip the "RecursionError"
+sys.setrecursionlimit(num*2)
+
+
 print(f"\n the {num}th fibonacci num is:\n", fib(num), "\n")

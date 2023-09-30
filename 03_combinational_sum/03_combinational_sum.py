@@ -6,7 +6,7 @@ def sum_possible(amount: int, numbers: list[int]) -> bool:
         return True
     if amount < 0:
         return False
-    
+
     if amount in map_dict:
         return map_dict.get(amount)
 
@@ -15,7 +15,7 @@ def sum_possible(amount: int, numbers: list[int]) -> bool:
         if sum_possible(sub_amount, numbers):
             map_dict[amount] = True
             return True
-    
+
     map_dict[amount] = False
     return False
 
